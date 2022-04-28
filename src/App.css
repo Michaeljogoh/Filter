@@ -1,0 +1,57 @@
+
+.header {
+  width: 100%;
+  height: 150px;
+  background-color: black;
+  color: white;
+  display: inline-block;
+
+}
+.header h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+
+}
+.input {
+  width: 20%;
+  margin-top: 5px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  align-items: end;
+ }
+
+.user-list {
+  margin-top: 30px;
+  border: 100px;
+  border-radius: 50%;
+}
+
+.user {
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px;
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-id {
+  margin-right: 20px;
+}
+
+
+.user-age {
+  margin-left: auto;
+}
+
+@media (max-width:550px){
+  .input {
+    width: 200px;
+  }
+  
+}
+
+
