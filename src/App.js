@@ -4,7 +4,7 @@ import './App.css';
 
 const USERS = [
   { 
-    id: 1,  name: 'Christian', age: "15 years ",  title: 'C.E.O'
+    id: 1,  name: 'Christian',  title: 'C.E.O'
   },
 
   {
@@ -28,54 +28,54 @@ const USERS = [
  }, 
  
  {
-  id: 8, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
+  id: 8, name: 'Mark',  title: 'Senior Software Engineer'
 },
 
 {
-  id: 9, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
+  id: 9, name: 'Mark',  title: 'Senior Software Engineer'
 }, 
 
 {
-     id: 10, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
+     id: 10, name: 'Mark',  title: 'Senior Software Engineer'
   },
   
 {
-    id: 11, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
+    id: 11, name: 'Mark',  title: 'Senior Software Engineer'
  }, 
  
  {
-  id: 12, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
+  id: 12, name: 'Mark',  title: 'Senior Software Engineer'
 },
  
   {
-     id: 13, name: 'Tom Riddle', age: 28 ,title: 'Senior Software Engineer'
+     id: 13, name: 'Tom age: 28 ,title: 'Senior Software Engineer'
   },
   { 
-    id: 14, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 15, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
+    id: 14, name: 'Kenny', title: 'Senior Software Engineer'
   },
 
   { 
-    id: 16, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
+    id: 15, name: 'Kenny', title: 'Senior Software Engineer'
   },
 
   { 
-    id: 17, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
+    id: 16, name: 'Kenny',  title: 'Senior Software Engineer'
   },
 
   { 
-    id: 18, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
+    id: 17, name: 'Kenny', title: 'Senior Software Engineer'
   },
 
   { 
-    id: 19, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
+    id: 18, name: 'Kenny', title: 'Senior Software Engineer'
   },
 
   { 
-    id: 20, name: 'Kenny', age: 23, title: 'Senior Software Engineer'
+    id: 19, name: 'Kenny',  title: 'Senior Software Engineer'
+  },
+
+  { 
+    id: 20, name: 'Kenny',  title: 'Senior Software Engineer'
   },
 ];
 
@@ -127,7 +127,6 @@ function Map() {
             <li key={user.id} className="user">
               <span className="user-id">{user.id}</span>
               <span className="user-name">{user.name}</span>
-              <span className="user-age">{user.age} year old</span>
               <span className="user-age">{user.title}</span>
             
           
