@@ -1,10 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  width: 100%;
+}
 
 .header {
   width: 100%;
-  height: 150px;
+  height: 120px;
   background-color: black;
   color: white;
-  display: inline-block;
+  /* display: inline-block; */
 
 }
 .header h1 {
@@ -16,42 +23,64 @@
 }
 .input {
   width: 20%;
-  margin-top: 5px;
+  margin-top: 30px;
   padding: 7px;
   border: none;
   border-radius: 5px;
   align-items: end;
+  
  }
 
-.user-list {
-  margin-top: 30px;
-  border: 100px;
-  border-radius: 50%;
+.userContainer{
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.user {
-  list-style: none;
-  margin: 10px 0;
-  padding: 10px;
-  background: #eee;
-  display: flex;
-  justify-content: space-between;
+.user{
+  margin: 4em 0 0 8em;
+  text-align: center;
+  border: 1px solid rgb(128, 123, 123);
+  border-radius: 15px;
+  border-left: none;
+  border-right: none;
+  box-shadow: 2px 4px ;
 }
-
-.user-id {
+.user img{
+  height: 15em;
+  width: 17em;
+  border-radius: 15px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+/* .user-id {
   margin-right: 20px;
 }
 
 
 .user-age {
   margin-left: auto;
-}
+} */
 
-@media (max-width:550px){
+@media (max-width: 950px){
   .input {
-    width: 200px;
+    width: 300px;
+  }
+  .userContainer{
+    grid-template-columns: repeat(2, 1fr);
   }
   
 }
+@media (max-width: 450px){
+  .input {
+    width: 200px;
+  }
+  .userContainer{
+    grid-template-columns: 1fr;
+  }
+  
+}
+
 
 

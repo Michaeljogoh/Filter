@@ -1,82 +1,54 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './App.css';
+import Navbar from './components/Navbar';
+import bolla from "./image/bolla.jpg"
+import bring from "./image/bring.jpg"
+import eco from "./image/eco.jpg"
+import enlight from "./image/enlight.jpg"
+import femi from "./image/femi.jpg"
+import home from "./image/home.jpg"
 
 
 const USERS = [
-  { 
-    id: 1,  name: 'Christian',  title: 'C.E.O'
+  {
+    id: 1, 
+    name: 'Christian', 
+    title: 'C.E.O',
+    image: bolla
   },
 
   {
-     id: 2,  name: 'PJmiles', age: 30, title: 'Senior Software Engineer'
+    id: 2, 
+    name: 'PJmiles', 
+    title: 'Senior Software Engineer',
+    image: bring
   },
 
   {
-     id: 3, name: 'Michael', age: 40 ,title: 'Senior Software Engineer'
-   },
-  { 
-    id: 4, name: 'Victor', age: 50 ,title: 'Senior Software Engineer'
- },
-  { 
-    id: 5, name: 'Tayo', age: 30,  title: 'Senior Software Engineer'
+    id: 3, 
+    name: 'Michael', 
+    title: 'Senior Software Engineer',
+    image: eco
   },
   {
-     id: 6, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
+    id: 4, 
+    name: 'Victor', 
+    title: 'Senior Software Engineer',
+    image: enlight
   },
   {
-    id: 7, name: 'Mark', age: 68 , title: 'Senior Software Engineer'
- }, 
- 
- {
-  id: 8, name: 'Mark',  title: 'Senior Software Engineer'
-},
-
-{
-  id: 9, name: 'Mark',  title: 'Senior Software Engineer'
-}, 
-
-{
-     id: 10, name: 'Mark',  title: 'Senior Software Engineer'
+    id: 5, 
+    name: 'Tayo', 
+    title: 'Senior Software Engineer',
+    image: femi
+  },
+  {
+    id: 6,
+     name: 'Mark', 
+     title: 'Senior Software Engineer',
+     image: home
   },
   
-{
-    id: 11, name: 'Mark',  title: 'Senior Software Engineer'
- }, 
- 
- {
-  id: 12, name: 'Mark',  title: 'Senior Software Engineer'
-},
- 
-  {
-     id: 13, name: 'Tom age: 28 ,title: 'Senior Software Engineer'
-  },
-  { 
-    id: 14, name: 'Kenny', title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 15, name: 'Kenny', title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 16, name: 'Kenny',  title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 17, name: 'Kenny', title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 18, name: 'Kenny', title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 19, name: 'Kenny',  title: 'Senior Software Engineer'
-  },
-
-  { 
-    id: 20, name: 'Kenny',  title: 'Senior Software Engineer'
-  },
 ];
 
 function Map() {
@@ -104,33 +76,17 @@ function Map() {
   };
 
   return (
-        
+
     <div className="container">
-
-      <div className = "header">
-        <h1>Software Engineer Overview</h1>
-      <input
-        type="search"
-        value={name}
-        onChange={filter}
-        className="input"
-        placeholder="Search"
-      />
-        
-        
-         </div>
-    
-
-      <div className="user-list">
+      <Navbar name={name} filter={filter}/>
+        <div className="userContainer">
         {foundUsers && foundUsers.length > 0 ? (
           foundUsers.map((user) => (
-            <li key={user.id} className="user">
-              <span className="user-id">{user.id}</span>
-              <span className="user-name">{user.name}</span>
-              <span className="user-age">{user.title}</span>
-            
-          
-            </li>
+            <div key={user.id} className="user">
+              <img src={user.image} alt="bolla"/>
+              <h3 className="user-name">{user.name}</h3>
+              <p className="userTitle">{user.title}</p>
+            </div >
           ))
         ) : (
           <h1>No results found!</h1>
